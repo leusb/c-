@@ -2,6 +2,8 @@
 #include <iostream>
 #include <sstream>
 #include <chrono>
+#include <cstdlib> // für rand(), srand()
+#include <ctime>   // für time()
 
 void CLI::run()
 {
@@ -202,6 +204,223 @@ void CLI::run()
                 }
             }
         }
+        else if (command == "save")
+        {
+            std::string filename;
+            if (iss >> filename)
+            {
+                if (game)
+                {
+                    game->save(filename);
+                }
+                else
+                {
+                    std::cout << "Fehler: Es wurde noch keine Welt erstellt.\n";
+                }
+            }
+            else
+            {
+                std::cout << "Fehler: Benutze 'save <filename>'\n";
+            }
+        }
+        else if (command == "load")
+        {
+            std::string filename;
+            if (iss >> filename)
+            {
+                if (game)
+                    delete game;
+
+                game = new GameOfLife(1, 1); // Dummy-Initialisierung
+                game->load(filename);
+            }
+            else
+            {
+                std::cout << "Fehler: Benutze 'load <filename>'\n";
+            }
+        }
+        else if (command == "glider")
+        {
+            int x, y;
+            if (iss >> x >> y)
+            {
+                if (game)
+                {
+                    game->set_cell((x + 1) % game->get_width(), y % game->get_height(), 1);
+                    game->set_cell((x + 2) % game->get_width(), (y + 1) % game->get_height(), 1);
+                    game->set_cell(x % game->get_width(), (y + 2) % game->get_height(), 1);
+                    game->set_cell((x + 1) % game->get_width(), (y + 2) % game->get_height(), 1);
+                    game->set_cell((x + 2) % game->get_width(), (y + 2) % game->get_height(), 1);
+                    std::cout << "Glider bei (" << x << "," << y << ") gesetzt.\n";
+                }
+                else
+                {
+                    std::cout << "Fehler: Es wurde noch keine Welt erstellt.\n";
+                }
+            }
+            else
+            {
+                std::cout << "Fehler: Benutze 'glider <x> <y>'\n";
+            }
+        }
+        else if (command == "toad")
+        {
+            int x, y;
+            if (iss >> x >> y)
+            {
+                if (game)
+                {
+                    int w = game->get_width();
+                    int h = game->get_height();
+
+                    game->set_cell((x + 1) % w, y % h, 1);
+                    game->set_cell((x + 2) % w, y % h, 1);
+                    game->set_cell((x + 3) % w, y % h, 1);
+                    game->set_cell(x % w, (y + 1) % h, 1);
+                    game->set_cell((x + 1) % w, (y + 1) % h, 1);
+                    game->set_cell((x + 2) % w, (y + 1) % h, 1);
+
+                    std::cout << "Toad bei (" << x << "," << y << ") gesetzt.\n";
+                }
+                else
+                {
+                    std::cout << "Fehler: Es wurde noch keine Welt erstellt.\n";
+                }
+            }
+            else
+            {
+                std::cout << "Fehler: Benutze 'toad <x> <y>'\n";
+            }
+        }
+        else if (command == "beacon")
+        {
+            int x, y;
+            if (iss >> x >> y)
+            {
+                if (game)
+                {
+                    int w = game->get_width();
+                    int h = game->get_height();
+
+                    // linke obere Ecke
+                    game->set_cell((x + 0) % w, (y + 0) % h, 1);
+                    game->set_cell((x + 1) % w, (y + 0) % h, 1);
+                    game->set_cell((x + 0) % w, (y + 1) % h, 1);
+                    game->set_cell((x + 1) % w, (y + 1) % h, 1);
+
+                    // rechte untere Ecke
+                    game->set_cell((x + 2) % w, (y + 2) % h, 1);
+                    game->set_cell((x + 3) % w, (y + 2) % h, 1);
+                    game->set_cell((x + 2) % w, (y + 3) % h, 1);
+                    game->set_cell((x + 3) % w, (y + 3) % h, 1);
+
+                    std::cout << "Beacon bei (" << x << "," << y << ") gesetzt.\n";
+                }
+                else
+                {
+                    std::cout << "Fehler: Es wurde noch keine Welt erstellt.\n";
+                }
+            }
+            else
+            {
+                std::cout << "Fehler: Benutze 'beacon <x> <y>'\n";
+            }
+        }
+        else if (command == "methuselah")
+        {
+            int x, y;
+            if (iss >> x >> y)
+            {
+                if (game)
+                {
+                    int w = game->get_width();
+                    int h = game->get_height();
+
+                    // R-Pentomino
+                    game->set_cell((x + 1) % w, y % h, 1);
+                    game->set_cell((x + 2) % w, y % h, 1);
+                    game->set_cell(x % w, (y + 1) % h, 1);
+                    game->set_cell((x + 1) % w, (y + 1) % h, 1);
+                    game->set_cell((x + 1) % w, (y + 2) % h, 1);
+
+                    std::cout << "Methuselah (R-Pentomino) bei (" << x << "," << y << ") gesetzt.\n";
+                }
+                else
+                {
+                    std::cout << "Fehler: Es wurde noch keine Welt erstellt.\n";
+                }
+            }
+            else
+            {
+                std::cout << "Fehler: Benutze 'methuselah <x> <y>'\n";
+            }
+        }
+        else if (command == "random")
+        {
+            int n;
+            if (iss >> n)
+            {
+                if (game)
+                {
+                    int w = game->get_width();
+                    int h = game->get_height();
+
+                    for (int i = 0; i < n; ++i)
+                    {
+                        int pattern = rand() % 4; // 0=glider, 1=toad, 2=beacon, 3=methuselah
+                        int x = rand() % w;
+                        int y = rand() % h;
+
+                        switch (pattern)
+                        {
+                        case 0: // glider
+                            game->set_cell((x + 1) % w, y % h, 1);
+                            game->set_cell((x + 2) % w, (y + 1) % h, 1);
+                            game->set_cell(x % w, (y + 2) % h, 1);
+                            game->set_cell((x + 1) % w, (y + 2) % h, 1);
+                            game->set_cell((x + 2) % w, (y + 2) % h, 1);
+                            break;
+                        case 1: // toad
+                            game->set_cell((x + 1) % w, y % h, 1);
+                            game->set_cell((x + 2) % w, y % h, 1);
+                            game->set_cell((x + 3) % w, y % h, 1);
+                            game->set_cell(x % w, (y + 1) % h, 1);
+                            game->set_cell((x + 1) % w, (y + 1) % h, 1);
+                            game->set_cell((x + 2) % w, (y + 1) % h, 1);
+                            break;
+                        case 2: // beacon
+                            game->set_cell((x + 0) % w, (y + 0) % h, 1);
+                            game->set_cell((x + 1) % w, (y + 0) % h, 1);
+                            game->set_cell((x + 0) % w, (y + 1) % h, 1);
+                            game->set_cell((x + 1) % w, (y + 1) % h, 1);
+                            game->set_cell((x + 2) % w, (y + 2) % h, 1);
+                            game->set_cell((x + 3) % w, (y + 2) % h, 1);
+                            game->set_cell((x + 2) % w, (y + 3) % h, 1);
+                            game->set_cell((x + 3) % w, (y + 3) % h, 1);
+                            break;
+                        case 3: // methuselah (R-pentomino)
+                            game->set_cell((x + 1) % w, y % h, 1);
+                            game->set_cell((x + 2) % w, y % h, 1);
+                            game->set_cell(x % w, (y + 1) % h, 1);
+                            game->set_cell((x + 1) % w, (y + 1) % h, 1);
+                            game->set_cell((x + 1) % w, (y + 2) % h, 1);
+                            break;
+                        }
+                    }
+
+                    std::cout << n << " zufällige Muster platziert.\n";
+                }
+                else
+                {
+                    std::cout << "Fehler: Es wurde noch keine Welt erstellt.\n";
+                }
+            }
+            else
+            {
+                std::cout << "Fehler: Benutze 'random <anzahl>'\n";
+            }
+        }
+
         else
         {
             std::cout << "Unbekannter Befehl: " << command << "\n";

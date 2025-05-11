@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/leosteiner/Desktop/c++/02/game_of_life
+CMAKE_SOURCE_DIR = /Users/leosteiner/Desktop/c-/game_of_life
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/leosteiner/Desktop/c++/02/game_of_life/build
+CMAKE_BINARY_DIR = /Users/leosteiner/Desktop/c-/game_of_life/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/game_of_life.dir/depend.make
@@ -73,46 +73,46 @@ CMakeFiles/game_of_life.dir/codegen:
 .PHONY : CMakeFiles/game_of_life.dir/codegen
 
 CMakeFiles/game_of_life.dir/src/main.cpp.o: CMakeFiles/game_of_life.dir/flags.make
-CMakeFiles/game_of_life.dir/src/main.cpp.o: /Users/leosteiner/Desktop/c++/02/game_of_life/src/main.cpp
+CMakeFiles/game_of_life.dir/src/main.cpp.o: /Users/leosteiner/Desktop/c-/game_of_life/src/main.cpp
 CMakeFiles/game_of_life.dir/src/main.cpp.o: CMakeFiles/game_of_life.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/leosteiner/Desktop/c++/02/game_of_life/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game_of_life.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_of_life.dir/src/main.cpp.o -MF CMakeFiles/game_of_life.dir/src/main.cpp.o.d -o CMakeFiles/game_of_life.dir/src/main.cpp.o -c /Users/leosteiner/Desktop/c++/02/game_of_life/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/leosteiner/Desktop/c-/game_of_life/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game_of_life.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_of_life.dir/src/main.cpp.o -MF CMakeFiles/game_of_life.dir/src/main.cpp.o.d -o CMakeFiles/game_of_life.dir/src/main.cpp.o -c /Users/leosteiner/Desktop/c-/game_of_life/src/main.cpp
 
 CMakeFiles/game_of_life.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game_of_life.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosteiner/Desktop/c++/02/game_of_life/src/main.cpp > CMakeFiles/game_of_life.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosteiner/Desktop/c-/game_of_life/src/main.cpp > CMakeFiles/game_of_life.dir/src/main.cpp.i
 
 CMakeFiles/game_of_life.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game_of_life.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosteiner/Desktop/c++/02/game_of_life/src/main.cpp -o CMakeFiles/game_of_life.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosteiner/Desktop/c-/game_of_life/src/main.cpp -o CMakeFiles/game_of_life.dir/src/main.cpp.s
 
 CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o: CMakeFiles/game_of_life.dir/flags.make
-CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o: /Users/leosteiner/Desktop/c++/02/game_of_life/src/GameOfLife.cpp
+CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o: /Users/leosteiner/Desktop/c-/game_of_life/src/GameOfLife.cpp
 CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o: CMakeFiles/game_of_life.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/leosteiner/Desktop/c++/02/game_of_life/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o -MF CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o.d -o CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o -c /Users/leosteiner/Desktop/c++/02/game_of_life/src/GameOfLife.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/leosteiner/Desktop/c-/game_of_life/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o -MF CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o.d -o CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o -c /Users/leosteiner/Desktop/c-/game_of_life/src/GameOfLife.cpp
 
 CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosteiner/Desktop/c++/02/game_of_life/src/GameOfLife.cpp > CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosteiner/Desktop/c-/game_of_life/src/GameOfLife.cpp > CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.i
 
 CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosteiner/Desktop/c++/02/game_of_life/src/GameOfLife.cpp -o CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosteiner/Desktop/c-/game_of_life/src/GameOfLife.cpp -o CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.s
 
 CMakeFiles/game_of_life.dir/src/CLI.cpp.o: CMakeFiles/game_of_life.dir/flags.make
-CMakeFiles/game_of_life.dir/src/CLI.cpp.o: /Users/leosteiner/Desktop/c++/02/game_of_life/src/CLI.cpp
+CMakeFiles/game_of_life.dir/src/CLI.cpp.o: /Users/leosteiner/Desktop/c-/game_of_life/src/CLI.cpp
 CMakeFiles/game_of_life.dir/src/CLI.cpp.o: CMakeFiles/game_of_life.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/leosteiner/Desktop/c++/02/game_of_life/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/game_of_life.dir/src/CLI.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_of_life.dir/src/CLI.cpp.o -MF CMakeFiles/game_of_life.dir/src/CLI.cpp.o.d -o CMakeFiles/game_of_life.dir/src/CLI.cpp.o -c /Users/leosteiner/Desktop/c++/02/game_of_life/src/CLI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/leosteiner/Desktop/c-/game_of_life/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/game_of_life.dir/src/CLI.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/game_of_life.dir/src/CLI.cpp.o -MF CMakeFiles/game_of_life.dir/src/CLI.cpp.o.d -o CMakeFiles/game_of_life.dir/src/CLI.cpp.o -c /Users/leosteiner/Desktop/c-/game_of_life/src/CLI.cpp
 
 CMakeFiles/game_of_life.dir/src/CLI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/game_of_life.dir/src/CLI.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosteiner/Desktop/c++/02/game_of_life/src/CLI.cpp > CMakeFiles/game_of_life.dir/src/CLI.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leosteiner/Desktop/c-/game_of_life/src/CLI.cpp > CMakeFiles/game_of_life.dir/src/CLI.cpp.i
 
 CMakeFiles/game_of_life.dir/src/CLI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/game_of_life.dir/src/CLI.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosteiner/Desktop/c++/02/game_of_life/src/CLI.cpp -o CMakeFiles/game_of_life.dir/src/CLI.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leosteiner/Desktop/c-/game_of_life/src/CLI.cpp -o CMakeFiles/game_of_life.dir/src/CLI.cpp.s
 
 # Object files for target game_of_life
 game_of_life_OBJECTS = \
@@ -128,7 +128,7 @@ game_of_life: CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o
 game_of_life: CMakeFiles/game_of_life.dir/src/CLI.cpp.o
 game_of_life: CMakeFiles/game_of_life.dir/build.make
 game_of_life: CMakeFiles/game_of_life.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/leosteiner/Desktop/c++/02/game_of_life/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable game_of_life"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/leosteiner/Desktop/c-/game_of_life/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable game_of_life"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game_of_life.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -140,6 +140,6 @@ CMakeFiles/game_of_life.dir/clean:
 .PHONY : CMakeFiles/game_of_life.dir/clean
 
 CMakeFiles/game_of_life.dir/depend:
-	cd /Users/leosteiner/Desktop/c++/02/game_of_life/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/leosteiner/Desktop/c++/02/game_of_life /Users/leosteiner/Desktop/c++/02/game_of_life /Users/leosteiner/Desktop/c++/02/game_of_life/build /Users/leosteiner/Desktop/c++/02/game_of_life/build /Users/leosteiner/Desktop/c++/02/game_of_life/build/CMakeFiles/game_of_life.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/leosteiner/Desktop/c-/game_of_life/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/leosteiner/Desktop/c-/game_of_life /Users/leosteiner/Desktop/c-/game_of_life /Users/leosteiner/Desktop/c-/game_of_life/build /Users/leosteiner/Desktop/c-/game_of_life/build /Users/leosteiner/Desktop/c-/game_of_life/build/CMakeFiles/game_of_life.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/game_of_life.dir/depend
 

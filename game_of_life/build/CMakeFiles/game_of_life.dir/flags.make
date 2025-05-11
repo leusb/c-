@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/leosteiner/Desktop/c++/02/game_of_life/include
+CXX_INCLUDES = -I/Users/leosteiner/Desktop/c-/game_of_life/include
 
 CXX_FLAGSarm64 = -std=gnu++17 -arch arm64
 

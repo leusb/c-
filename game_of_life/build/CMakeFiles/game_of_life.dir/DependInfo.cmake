@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/leosteiner/Desktop/c++/02/game_of_life/src/CLI.cpp" "CMakeFiles/game_of_life.dir/src/CLI.cpp.o" "gcc" "CMakeFiles/game_of_life.dir/src/CLI.cpp.o.d"
-  "/Users/leosteiner/Desktop/c++/02/game_of_life/src/GameOfLife.cpp" "CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o" "gcc" "CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o.d"
-  "/Users/leosteiner/Desktop/c++/02/game_of_life/src/main.cpp" "CMakeFiles/game_of_life.dir/src/main.cpp.o" "gcc" "CMakeFiles/game_of_life.dir/src/main.cpp.o.d"
+  "/Users/leosteiner/Desktop/c-/game_of_life/src/CLI.cpp" "CMakeFiles/game_of_life.dir/src/CLI.cpp.o" "gcc" "CMakeFiles/game_of_life.dir/src/CLI.cpp.o.d"
+  "/Users/leosteiner/Desktop/c-/game_of_life/src/GameOfLife.cpp" "CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o" "gcc" "CMakeFiles/game_of_life.dir/src/GameOfLife.cpp.o.d"
+  "/Users/leosteiner/Desktop/c-/game_of_life/src/main.cpp" "CMakeFiles/game_of_life.dir/src/main.cpp.o" "gcc" "CMakeFiles/game_of_life.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

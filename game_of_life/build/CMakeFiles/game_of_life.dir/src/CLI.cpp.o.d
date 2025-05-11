@@ -1,7 +1,7 @@
 CMakeFiles/game_of_life.dir/src/CLI.cpp.o: \
-  /Users/leosteiner/Desktop/c++/02/game_of_life/src/CLI.cpp \
-  /Users/leosteiner/Desktop/c++/02/game_of_life/include/CLI.hpp \
-  /Users/leosteiner/Desktop/c++/02/game_of_life/include/GameOfLife.hpp \
+  /Users/leosteiner/Desktop/c-/game_of_life/src/CLI.cpp \
+  /Users/leosteiner/Desktop/c-/game_of_life/include/CLI.hpp \
+  /Users/leosteiner/Desktop/c-/game_of_life/include/GameOfLife.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h \

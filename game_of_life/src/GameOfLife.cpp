@@ -1,6 +1,6 @@
 #include "GameOfLife.hpp"
 #include <iostream>
-#include <fstream> // für Dateioperationen
+#include <fstream>
 
 GameOfLife::GameOfLife(int width, int height)
     : width(width), height(height), grid(height, std::vector<int>(width, 0))
@@ -52,8 +52,8 @@ void GameOfLife::evolve()
                     if (dx == 0 && dy == 0)
                         continue; // sich selbst überspringen
 
-                    int nx = (x + dx + width) % width;   // toroidal: links/rechts verbinden
-                    int ny = (y + dy + height) % height; // toroidal: oben/unten verbinden
+                    int nx = (x + dx + width) % width;   // toroidal: links/rechts des gitters verbinden
+                    int ny = (y + dy + height) % height; // toroidal: oben/unten des gitters verbinden
 
                     alive_neighbors += grid[ny][nx];
                 }
